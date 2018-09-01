@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Rock paper scissors Game</h1>
+<Script>
+    //promt for user choice
+    var userChoice = prompt("Do you choose rock, paper or scissors?");
+    //random method gives computer choice
+    var computerChoice = Math.random();
+    if (computerChoice <0.34){
+    computerChoice = "rock";
+    }else if(computerChoice <=0.67){
+    computerChoice = "paper";
+    }
+    else{
+    computerChoice = "scissors";
+    }
+    //compare function
+    var compare = function(choice1,choice2){
+    if(choice1===choice2){
+    return "The result is a tie!";
+    }
+    if(choice1==="rock"){
+    if(choice2==="scissors"){
+    return "rock wins(user)";
+    }
+    else{
+    return "paper wins(computer)";
+    }
+    }
+    if(choice1==="paper"){
+    if(choice2==="rock"){
+    return "paper wins(user)";
+    }
+    else{
+    return "scissors wins(Computer)";
+    }
+    }
+    if(choice1==="scissors"){
+    if(choice2==="rock"){
+    return "rock wins(computer)";
+    }
+    else{
+    return "scissors wins(user)";
+    }
+    }
+    };
+    <!-- calling compare function-->
+    alert(compare(userChoice,computerChoice));
+    <!-- storing user and computer choices in console-->
+    console.log("computer choice "+computerChoice);
+    console.log("user choice "+userChoice);
+</Script>
+</body>
+</html>
