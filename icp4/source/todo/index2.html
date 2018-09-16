@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="todo.js"></script>
+<link rel="stylesheet" href="main.css">
+<style>
+    .done-true {
+        text-decoration: line-through;
+        color: grey;
+    }
+    body{
+        text-align: center;
+        background-color: lightpink;
+        font-family: Calibri;
+    }
+</style>
+<body ng-app="myApp" ng-controller="todoCtrl">
+
+<h2><code>My TodoList</code></h2><br>
+<div ng-controller="todoCtrl as todoList">
+    <!-- todisplay remaining process-->
+<span>{{remaining()}} of {{todoList.length}} remaining</span>
+<form ng-submit="todoAdd()"><br><br>
+    <input type="text" ng-model="todoInput" size="50" placeholder="Add New">
+    <input type="submit" value="Add New">
+</form>
+
+<br>
+<!--display loop-->
+<div ng-repeat="x in todoList">
+    <input type="checkbox" ng-model="x.done">
+    <!-- code to strike off if it is true-->
+    <span class="done-{{x.done}}" >{{x.todoText}}</span></label>
+</div>
+<!-- for remove-->
+<p><button ng-click="remove()">Remove marked</button></p>
+
+<script>
+
+</script>
+
+</body>
+</html>
