@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlergyActivity">
+    <TextView
+        android:id="@+id/txtdrug"
+        android:layout_width="259dp"
+        android:layout_height="139dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="45dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="47dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="221dp"
+        android:text="Diet to Take" />
+
+    <TextView
+        android:id="@+id/txtdiet"
+        android:layout_width="268dp"
+        android:layout_height="146dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-84dp"
+        android:layout_marginBottom="106dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtdiet"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:text="Medines" />
+
+    <Button
+        android:id="@+id/bttrack"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignEnd="@+id/txtdiet"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:onClick="track"
+        android:text="Track Diet" />
+
+</RelativeLayout>
